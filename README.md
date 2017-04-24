@@ -5,7 +5,7 @@ PSTEE-russian
 
 На основе перевода из Arcane Pack.
 
-Версия перевода: 0.5, бета.
+Версия перевода: 1.0.
 
 Состояние перевода:
 -------------------
@@ -15,20 +15,15 @@ PSTEE-russian
 -------------------
 Сборка перевода на [yandex](https://yadi.sk/d/gbht6Qxg3H2fXT), файл обновляется.
 Распаковываем собранный перевод в каталог с игрой.
-Если русский не включился автоматически, его можно прописать вручную, отредактировав файл настроек `Baldur.lua`.
-Находим в `Baldur.lua` строку с `SetPrivateProfileString('Language','Text'`, и прописываем туда
 
-```lua
-SetPrivateProfileString('Language','Text','ru_RU')
-```
-
-`Baldur.lua` расположен для Windows-версии игры в папке `Документы\Planescape Torment - Enhanced Edition`, для Linux-версии - в каталоге `~/.local/share/Planescape Torment - Enhanced Edition`.
-
-Чтобы включить заголовки экзосетом, находим там строку с `SetPrivateProfileString('Fonts','ru_RU'` и заменяем её на
+Чтобы включить заголовки экзосетом, находим в файле настроек `Baldur.lua` строку с `SetPrivateProfileString('Fonts','ru_RU'` и заменяем её на
 
 ```lua
 SetPrivateProfileString('Fonts','ru_RU','')
 ```
+
+`Baldur.lua` расположен для Windows-версии игры в папке `Документы\Planescape Torment - Enhanced Edition`, для Linux-версии - в каталоге `~/.local/share/Planescape Torment - Enhanced Edition`.
+
 
 Над переводом работали:
 -----------------------
