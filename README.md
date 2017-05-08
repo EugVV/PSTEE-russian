@@ -5,7 +5,7 @@ PSTEE-russian
 
 На основе перевода из Arcane Pack.
 
-Версия перевода: 1.0.
+Версия перевода: 1.1.
 
 Состояние перевода:
 -------------------
@@ -14,21 +14,14 @@ PSTEE-russian
 Установка перевода:
 -------------------
 Сборка перевода на [yandex](https://yadi.sk/d/gbht6Qxg3H2fXT), файл обновляется.
-Распаковываем собранный перевод в каталог с игрой.
-
-Чтобы включить заголовки экзосетом, находим в файле настроек `Baldur.lua` строку с `SetPrivateProfileString('Fonts','ru_RU'` и заменяем её на
-
-```lua
-SetPrivateProfileString('Fonts','ru_RU','')
-```
-
-`Baldur.lua` расположен для Windows-версии игры в папке `Документы\Planescape Torment - Enhanced Edition`, для Linux-версии - в каталоге `~/.local/share/Planescape Torment - Enhanced Edition`.
-
+Просто распаковываем собранный перевод в каталог с игрой.
 
 Над переводом работали:
 -----------------------
 Авторы Arcane Pack: Macbeth, Refiler, wooder.
 
 Перевод новых строк, адаптация к EE, исправления: Si1ver.
+
+Шрифты в сборке: DZH.
 
 [Тема для обсуждения перевода](http://www.arcanecoast.ru/forum/viewtopic.php?f=8&t=1045).
