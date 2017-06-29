@@ -20,7 +20,7 @@ PSTEE-russian
 
 Над переводом работали:
 -----------------------
-Авторы Arcane Pack: Macbeth, Refiler, wooder.
+Авторы Arcane Pack: Macbeth, Refiler, wooder, Aldark.
 
 Перевод новых строк, адаптация к EE, исправления: Si1ver.
 
