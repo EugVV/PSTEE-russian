@@ -31,3 +31,25 @@ COPY_EXISTING ~eivene.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101000 #101000 USING ~psteeru/tra/fm-dust.tra~
+
+COPY_EXISTING ~patron3.cre~ ~lang/ru_RU/override~
+              ~patron6.cre~ ~lang/ru_RU/override~
+              ~patron7.cre~ ~lang/ru_RU/override~
+              ~sensaf1.cre~ ~lang/ru_RU/override~
+              ~sensf1.cre~ ~lang/ru_RU/override~
+              ~sensf2.cre~ ~lang/ru_RU/override~
+              ~sensf3.cre~ ~lang/ru_RU/override~
+              ~sensf4.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101001
+  SAY NAME2 #101001
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~artist.cre~ ~lang/ru_RU/override~
+              ~fstclrk.cre~ ~lang/ru_RU/override~
+              ~jolmi.cre~ ~lang/ru_RU/override~
+              ~thrncmb.cre~ ~lang/ru_RU/override~
+              ~udesire.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101001
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101001 #101001 USING ~psteeru/tra/fm-sens.tra~
