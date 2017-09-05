@@ -1,8 +1,33 @@
 BACKUP ~psteeru/backup~
 AUTHOR ~Si1ver~
-VERSION ~V0.2~
+VERSION ~V0.3~
 
-BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.0~
+BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.1~
 STRING_SET_RANGE #0 #106833 USING ~psteeru/tra/ru.tra~
 
 COPY ~psteeru/includes.lua~   ~override/includes.lua~
+
+BEGIN ~Override Female CRE for Russian text~
+
+COPY_EXISTING ~0203fd1.cre~ ~lang/ru_RU/override~
+              ~0203fd2.cre~ ~lang/ru_RU/override~
+              ~dustfb.cre~ ~lang/ru_RU/override~
+              ~dustfb2.cre~ ~lang/ru_RU/override~
+              ~dustfb3.cre~ ~lang/ru_RU/override~
+              ~dustfbar.cre~ ~lang/ru_RU/override~
+              ~dustfbr2.cre~ ~lang/ru_RU/override~
+              ~dustfbr3.cre~ ~lang/ru_RU/override~
+              ~dustfm.cre~ ~lang/ru_RU/override~
+              ~dustfm2.cre~ ~lang/ru_RU/override~
+              ~mourn2.cre~ ~lang/ru_RU/override~
+              ~mourn4.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101000
+  SAY NAME2 #101000
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~eivene.cre~ ~lang/ru_RU/override~
+              ~sere.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101000
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101000 #101000 USING ~psteeru/tra/fm-dust.tra~
