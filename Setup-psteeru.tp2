@@ -9,6 +9,8 @@ COPY ~psteeru/includes.lua~   ~override/includes.lua~
 
 BEGIN ~Override Female CRE for Russian text~
 
+MKDIR ~lang/ru_RU/override~
+
 COPY_EXISTING ~0203fd1.cre~ ~lang/ru_RU/override~
               ~0203fd2.cre~ ~lang/ru_RU/override~
               ~dustfb.cre~ ~lang/ru_RU/override~
