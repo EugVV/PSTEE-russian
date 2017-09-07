@@ -55,3 +55,31 @@ COPY_EXISTING ~artist.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101001 #101001 USING ~psteeru/tra/fm-sens.tra~
+
+COPY_EXISTING ~cwactf1.cre~ ~lang/ru_RU/override~
+              ~cwactf2.cre~ ~lang/ru_RU/override~
+              ~cwfem.cre~ ~lang/ru_RU/override~
+              ~cwmimef1.cre~ ~lang/ru_RU/override~
+              ~cwmimef2.cre~ ~lang/ru_RU/override~
+              ~cwpoetf1.cre~ ~lang/ru_RU/override~
+              ~cwrushf1.cre~ ~lang/ru_RU/override~
+              ~cwrushf2.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101002
+  SAY NAME2 #101002
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~aelwyn.cre~ ~lang/ru_RU/override~
+              ~dilig.cre~ ~lang/ru_RU/override~
+              ~dilignc.cre~ ~lang/ru_RU/override~
+              ~neml.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101002
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~cwcafef1.cre~ ~lang/ru_RU/override~
+              ~cwcafef2.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101003
+  SAY NAME2 #101002
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101002 #101002 USING ~psteeru/tra/fm-cwcit.tra~
+STRING_SET_RANGE #101003 #101003 USING ~psteeru/tra/fm-cfpat.tra~
