@@ -83,3 +83,41 @@ COPY_EXISTING ~cwcafef1.cre~ ~lang/ru_RU/override~
 
 STRING_SET_RANGE #101002 #101002 USING ~psteeru/tra/fm-cwcit.tra~
 STRING_SET_RANGE #101003 #101003 USING ~psteeru/tra/fm-cfpat.tra~
+
+COPY_EXISTING ~cushf.cre~ ~lang/ru_RU/override~
+              ~cushf2.cre~ ~lang/ru_RU/override~
+              ~cushf3.cre~ ~lang/ru_RU/override~
+              ~cushf4.cre~ ~lang/ru_RU/override~
+              ~cushf5.cre~ ~lang/ru_RU/override~
+              ~ghf1.cre~ ~lang/ru_RU/override~
+              ~ghf2.cre~ ~lang/ru_RU/override~
+              ~ghf3.cre~ ~lang/ru_RU/override~
+              ~haoda.cre~ ~lang/ru_RU/override~
+              ~hivevag3.cre~ ~lang/ru_RU/override~
+              ~hivevag4.cre~ ~lang/ru_RU/override~
+              ~hivevag6.cre~ ~lang/ru_RU/override~
+              ~hivew1.cre~ ~lang/ru_RU/override~
+              ~hivew2.cre~ ~lang/ru_RU/override~
+              ~hivew3.cre~ ~lang/ru_RU/override~
+              ~hivew4.cre~ ~lang/ru_RU/override~
+              ~hivew5.cre~ ~lang/ru_RU/override~
+              ~listenf.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101004
+  SAY NAME2 #101004
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~elyce.cre~ ~lang/ru_RU/override~
+              ~mmourn.cre~ ~lang/ru_RU/override~
+              ~virago.cre~ ~lang/ru_RU/override~
+              ~wangyar.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101004
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~touthvb.cre~ ~lang/ru_RU/override~
+              ~touthvd.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101005
+  SAY NAME2 #101004
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101004 #101004 USING ~psteeru/tra/fm-hvtp.tra~
+STRING_SET_RANGE #101005 #101005 USING ~psteeru/tra/fm-hvtou.tra~
