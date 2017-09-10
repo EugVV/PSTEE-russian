@@ -121,3 +121,32 @@ COPY_EXISTING ~touthvb.cre~ ~lang/ru_RU/override~
 
 STRING_SET_RANGE #101004 #101004 USING ~psteeru/tra/fm-hvtp.tra~
 STRING_SET_RANGE #101005 #101005 USING ~psteeru/tra/fm-hvtou.tra~
+
+COPY_EXISTING ~lwcusf.cre~ ~lang/ru_RU/override~
+              ~lwcusf2.cre~ ~lang/ru_RU/override~
+              ~lwcusf3.cre~ ~lang/ru_RU/override~
+              ~lwfem.cre~ ~lang/ru_RU/override~
+              ~lwfem2.cre~ ~lang/ru_RU/override~
+              ~lwfem3.cre~ ~lang/ru_RU/override~
+              ~lwtieff.cre~ ~lang/ru_RU/override~
+              ~lwtieff2.cre~ ~lang/ru_RU/override~
+              ~lwtieff3.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101006
+  SAY NAME2 #101006
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~anarchy1.cre~ ~lang/ru_RU/override~
+              ~genfales.cre~ ~lang/ru_RU/override~
+              ~karina.cre~ ~lang/ru_RU/override~
+              ~mcfem.cre~ ~lang/ru_RU/override~
+              ~mcfem2.cre~ ~lang/ru_RU/override~
+              ~mcfem3.cre~ ~lang/ru_RU/override~
+              ~mcfem4.cre~ ~lang/ru_RU/override~
+              ~mcfem5.cre~ ~lang/ru_RU/override~
+              ~mcfem6.cre~ ~lang/ru_RU/override~
+              ~mcfem7.cre~ ~lang/ru_RU/override~
+              ~mcfem8.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101006
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101006 #101006 USING ~psteeru/tra/fm-lwtp.tra~
