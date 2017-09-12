@@ -158,3 +158,24 @@ COPY_EXISTING ~bpatron2.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101007 #101007 USING ~psteeru/tra/fm-brpat.tra~
+
+COPY_EXISTING ~buriedf.cre~ ~lang/ru_RU/override~
+              ~buriedf1.cre~ ~lang/ru_RU/override~
+              ~buriedf2.cre~ ~lang/ru_RU/override~
+              ~buriedf3.cre~ ~lang/ru_RU/override~
+              ~buriedf4.cre~ ~lang/ru_RU/override~
+              ~buriedf5.cre~ ~lang/ru_RU/override~
+              ~buriedf6.cre~ ~lang/ru_RU/override~
+              ~buriedf7.cre~ ~lang/ru_RU/override~
+              ~bvtieff.cre~ ~lang/ru_RU/override~
+              ~fbvger.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101008
+  SAY NAME2 #101008
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~radine.cre~ ~lang/ru_RU/override~
+              ~ulthera.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101008
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101008 #101008 USING ~psteeru/tra/fm-burvi.tra~
