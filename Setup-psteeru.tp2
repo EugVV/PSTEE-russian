@@ -150,3 +150,11 @@ COPY_EXISTING ~anarchy1.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101006 #101006 USING ~psteeru/tra/fm-lwtp.tra~
+
+COPY_EXISTING ~bpatron2.cre~ ~lang/ru_RU/override~
+              ~brocus2.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101007
+  SAY NAME2 #101007
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101007 #101007 USING ~psteeru/tra/fm-brpat.tra~
