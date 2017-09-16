@@ -203,3 +203,10 @@ COPY_EXISTING ~crstanc4.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101009 #101010 USING ~psteeru/tra/fm-curci.tra~
+
+COPY_EXISTING ~cfanarch.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101011
+  SAY NAME2 #101011
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101011 #101011 USING ~psteeru/tra/fm-curan.tra~
