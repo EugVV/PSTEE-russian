@@ -179,3 +179,27 @@ COPY_EXISTING ~radine.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101008 #101008 USING ~psteeru/tra/fm-burvi.tra~
+
+COPY_EXISTING ~carcfem.cre~ ~lang/ru_RU/override~
+              ~carcfem2.cre~ ~lang/ru_RU/override~
+              ~carcfem3.cre~ ~lang/ru_RU/override~
+              ~carcfem4.cre~ ~lang/ru_RU/override~
+              ~carcfem5.cre~ ~lang/ru_RU/override~
+              ~crsgirl.cre~ ~lang/ru_RU/override~
+              ~crstfem.cre~ ~lang/ru_RU/override~
+              ~crstfem2.cre~ ~lang/ru_RU/override~
+              ~crstfem3.cre~ ~lang/ru_RU/override~
+              ~crstfem4.cre~ ~lang/ru_RU/override~
+              ~crstfem5.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101009
+  SAY NAME2 #101009
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~crstanc4.cre~ ~lang/ru_RU/override~
+              ~crstanc5.cre~ ~lang/ru_RU/override~
+              ~crstanc6.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101010
+  SAY NAME2 #101009
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101009 #101010 USING ~psteeru/tra/fm-curci.tra~
