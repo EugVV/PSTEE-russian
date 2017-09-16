@@ -210,3 +210,12 @@ COPY_EXISTING ~cfanarch.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101011 #101011 USING ~psteeru/tra/fm-curan.tra~
+
+COPY_EXISTING ~crstwkf2.cre~ ~lang/ru_RU/override~
+              ~crstwkf3.cre~ ~lang/ru_RU/override~
+              ~crstwrkf.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101012
+  SAY NAME2 #101012
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101012 #101012 USING ~psteeru/tra/fm-whwrk.tra~
