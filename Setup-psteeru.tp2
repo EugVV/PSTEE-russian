@@ -243,3 +243,16 @@ COPY_EXISTING ~zf1072.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101013 #101013 USING ~psteeru/tra/fm-zmbwr.tra~
+
+COPY_EXISTING ~merchf.cre~ ~lang/ru_RU/override~
+              ~merchfo.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101014
+  SAY NAME2 #101014
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~kossah.cre~ ~lang/ru_RU/override~
+              ~meiram.cre~ ~lang/ru_RU/override~
+  SAY NAME2 #101014
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101014 #101014 USING ~psteeru/tra/fm-hvmrc.tra~
