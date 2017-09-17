@@ -219,3 +219,27 @@ COPY_EXISTING ~crstwkf2.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101012 #101012 USING ~psteeru/tra/fm-whwrk.tra~
+
+COPY_EXISTING ~zf1072.cre~ ~lang/ru_RU/override~
+              ~zf1096.cre~ ~lang/ru_RU/override~
+              ~zf114.cre~ ~lang/ru_RU/override~
+              ~zf1148.cre~ ~lang/ru_RU/override~
+              ~zf444.cre~ ~lang/ru_RU/override~
+              ~zf594.cre~ ~lang/ru_RU/override~
+              ~zf626.cre~ ~lang/ru_RU/override~
+              ~zf679.cre~ ~lang/ru_RU/override~
+              ~zf832.cre~ ~lang/ru_RU/override~
+              ~zf891.cre~ ~lang/ru_RU/override~
+              ~zf916.cre~ ~lang/ru_RU/override~
+              ~zfweak.cre~ ~lang/ru_RU/override~
+              ~zombief.cre~ ~lang/ru_RU/override~
+              ~zombief2.cre~ ~lang/ru_RU/override~
+              ~zombief3.cre~ ~lang/ru_RU/override~
+              ~zomfbar1.cre~ ~lang/ru_RU/override~
+              ~zomfbar2.cre~ ~lang/ru_RU/override~
+              ~zomfbar3.cre~ ~lang/ru_RU/override~
+  SAY NAME1 #101013
+  SAY NAME2 #101013
+  BUT_ONLY_IF_IT_CHANGES
+
+STRING_SET_RANGE #101013 #101013 USING ~psteeru/tra/fm-zmbwr.tra~
