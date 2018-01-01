@@ -1,0 +1,60 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player2)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player3)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player4)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player5)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player6)
+    FaceObject("Trans")
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Trans")
+    MoveToPoint([1411.854])
+    Dialogue([PC])
+    Enemy()
+    EndCutSceneMode()
+END
+
+

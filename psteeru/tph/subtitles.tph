@@ -1,0 +1,766 @@
+// =====================================================================================
+//                       ULTIMATE WEIDU PLANESCAPE: TORMENT FIXPACK
+//                               SUBTITLED ENDING COMPONENT
+//                                BY QWINN (Paul Escalona)
+// =====================================================================================
+// Last Modification Date:  May 4, 2009 - v4.00
+// =====================================================================================
+
+
+
+// ======================= PREFIGHT CONVERSATIONS - TO & TNO ===========================
+COPY_EXISTING ~1204cut1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra063a")
+    WaitSync(2)
+    PlaySoundThroughVoice("Tra063b")
+    WaitSync(1)
+    PlaySoundThroughVoice("Tra063c")
+    WaitSync(4)
+    FaceObject(Player1)
+    PlaySoundThroughVoice("Tra063d")
+    WaitSync(3)~
+   ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1204ta0.bcs~ ~lang/ru_RU/override~
+              ~1204td0.bcs~ ~lang/ru_RU/override~
+              ~1204tg0.bcs~ ~lang/ru_RU/override~
+              ~1204ti0.bcs~ ~lang/ru_RU/override~
+              ~1204tm0.bcs~ ~lang/ru_RU/override~
+              ~1204tn0.bcs~ ~lang/ru_RU/override~
+              ~1204tv0.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra060")~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COMPILE ~psteeru/copy/subtitles/1204TRB.BAF~
+
+// ================================ TO AND RAVEL ===============================
+
+// In Version 4.0, changing the following four lines from dialogue to floating text, because the dialogue was forcing Ravel to stand up
+// which sucked.
+
+COPY_EXISTING ~0610ct3c.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("RAV090A")~
+   ~PlaySoundThroughVoice("RAV090A")DisplayString(Myself,102050)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~0610ct3d.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("TRA075A")~
+   ~PlaySoundThroughVoice("TRA075A")DisplayString(Myself,102055)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~0610ct3e.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("RAV090B")~
+   ~PlaySoundThroughVoice("RAV090B")DisplayString(Myself,102051)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~0610ct3f.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("TRA075B")~
+   ~PlaySoundThroughVoice("TRA075B")DisplayString(Myself,102056)SetGlobal("Ravel_Cut_Scene","AR0610",12)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+
+
+COPY_EXISTING ~0610ct3g.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("RAV090C")
+    WaitSync(1)
+    PlaySequence(ANIM_TALK2)
+    WaitSync(4)~
+   ~StartDialog("DRAVEL","TransCut")~
+    REPLACE_TEXTUALLY
+   ~StartCutSceneEx("0610ct3h",FALSE)~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/0610CT3M.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("RavelCut")
+    Enemy()
+    Spell("RavelCut",WIZARD_BLACK_BARBED_SHIELD)
+    Wait(2)
+    Spell("TransCut",WIZARD_BLACK_BARBED_CURSE)
+    Wait(4)
+    Spell("TransCut",WIZARD_BLACKSPHERE)
+    Wait(5)
+    Spell("TransCut",WIZARD_BLACK_BARBED_CURSE)
+    Wait(18)
+    PlaySoundThroughVoice("RAV061")
+    Spell("TransCut",WIZARD_BLACKSPHERE)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("TransCut")
+    PlaySong(3)
+    ChangeEnemyAlly(Myself,FAMILIAR)
+    Wait(3)
+    Spell("RavelCut",WIZARD_FORCE_MISSILES)
+    Wait(1)
+    Spell("RavelCut",WIZARD_FORCE_MISSILES)
+    Wait(1)
+    Spell("RavelCut",WIZARD_FORCE_MISSILES)
+    Wait(5)
+    Spell("RavelCut",WIZARD_ELYSIUMS_TEARS)
+    Wait(23)
+    PlaySequence(ANIM_SPELL3)
+    ApplySpell("RavelCut",WIZARD_CONFLAGRATION)
+    Wait(4)
+    Spell("RavelCut",WIZARD_FIRE_AND_ICE)
+    Wait(13)
+    Kill("RavelCut")
+    Wait(3)
+    StartDialog("DTRANS","TransCut")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/0610CT3M.BAF~
+
+<<<<<<<< .../inlinedfile/0610CT3N.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("TransCut")
+    PlaySong(3)
+    MoveViewPoint([481.3537],FAST)
+    Wait(2)
+    TimedMoveToPoint([490.3552],60)
+    Face(0)
+    Wait(2)
+    EnableFogDither()
+    EnableSpriteDither()
+    SmallWait(1)
+    SetGlobal("Ravel_Curst_Portal","GLOBAL",2)
+    EndCutSceneMode()
+    TeleportParty("AR0700",[2590.1977],6)
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/0610CT3N.BAF~
+
+// =============================== TO & IGNUS ================================
+
+COPY_EXISTING ~1201ci11.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra038")~ ~~
+    REPLACE_TEXTUALLY
+   ~WaitSync(3)
+    StartCutSceneEx("1201CI12",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",1)StartDialog("DTRANS",Protagonist)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201ci12.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~Wait(2)~ ~Wait(3)Face(9)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201ci13.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra039")~ ~~
+    REPLACE_TEXTUALLY
+   ~StartCutSceneEx("1201CI14",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",2)StartDialog("DTRANS","IgnusF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201ci14.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Ign052B")~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/1201CI20.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+   CutSceneId("IgnusF")
+   SetGlobal("Subtitles","GLOBAL",3)
+   StartDialog("DIGNUS","IgnusF")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CI20.BAF~
+
+COPY_EXISTING ~1201csi2.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~StartCutSceneEx("1201CI21",FALSE)~ ~StartCutSceneEx("1201CI20",FALSE)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201ci21.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("Ign084")~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201ci22.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~StartCutSceneEx("1201CI23",FALSE)~
+                      ~SetGlobal("Subtitles","GLOBAL",4)StartDialog("DTRANS","IgnusF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~ar1201.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~StartCutSceneEx("1201csI3",FALSE)~ ~StartCutSceneEx("1201CSI2",FALSE)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+
+// =============================== TO & VHAILOR ==============================
+
+COPY_EXISTING ~1201cv11.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra040")~ ~~
+    REPLACE_TEXTUALLY
+   ~WaitSync(3)
+    StartCutSceneEx("1201CV12",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",5)StartDialog("DTRANS",Protagonist)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201cv13.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra041")~ ~~
+    REPLACE_TEXTUALLY
+   ~WaitSync(3)
+    StartCutSceneEx("1201CV14",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",6)StartDialog("DTRANS",Protagonist)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/1201CV21.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("VhailF")
+    Face(2)
+    Polymorph(24674)
+    FadeFromColor([20.0],0)
+    StickySinisterPoof("S113SMOK","VhailF",1)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Trans")
+    Wait(4)
+    PlaySong(14)
+    MoveToPoint([4561.1028])
+    FaceObject("VhailF")
+    Wait(2)
+    StickySinisterPoof("S113SMOK","VhailF",1)
+    SetGlobal("Subtitles","GLOBAL",7)
+    StartDialog("DTRANS",Protagonist)
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CV21.BAF~
+
+<<<<<<<< .../inlinedfile/1201CV22.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("VhailF")
+    Polymorph(57415)
+    Wait(2)
+    PlaySong(14)
+    FaceObject("Trans")
+    StartCutScene("1201CV23")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CV22.BAF~
+
+COPY_EXISTING ~1201cv23.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra041")~ ~~
+    REPLACE_TEXTUALLY
+   ~StartCutSceneEx("1201CV24",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",6)StartDialog("DTRANS",Protagonist)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201cv32.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra038C")
+    PlaySequence(ANIM_TALK2)
+    WaitSync(2)
+    PlaySoundThroughVoice("Tra041")
+    PlaySequence(ANIM_MISC1)
+    WaitSync(2)
+    StartCutSceneEx("1201CV33",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",8)StartDialog("DTRANS",Protagonist)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201cv14.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~FadeToColor([20.0],0)
+    Wait(3)~
+   ~Wait(2)
+    FadeToColor([20.0],0)
+    Wait(2)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// =============================== TO & GRACE ===============================
+<<<<<<<< .../inlinedfile/1201CSG1.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("GraceF")
+    SetAnimState(Myself,ANIM_STANDTOSTANCE)
+    PlaySong(13)
+    Face(14)
+    WaitSync(3)
+    Face(6)
+    SetGlobal("Subtitles","GLOBAL",9)
+    StartDialog("DGRACEF","GraceF")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CSG1.BAF~
+
+<<<<<<<< .../inlinedfile/1201CSGC.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("GraceF")
+    Wait(1)
+    MoveToPoint([4363.1183])
+    Wait(1)
+    PlaySong(13)
+    Face(10)
+    Wait(1)
+    Face(4)
+    Wait(1)
+    SetGlobal("Subtitles","GLOBAL",10)
+    StartDialog("DGRACEF","GraceF")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CSGC.BAF~
+
+COPY_EXISTING ~1201csg1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("Ffg071")~
+                      ~SetGlobal("Subtitles","GLOBAL",9)StartDialog("DGRACEF","GraceF")~
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("Ffg073")~
+                      ~SetGlobal("Subtitles","GLOBAL",10)StartDialog("DGRACEF","GraceF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csg2.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~CutSceneId("GraceF")~ ~CutSceneId("GraceF")MoveToPoint([4631.1180])Face(7)~
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("TRA032")~
+                      ~Wait(1)SetGlobal("Subtitles","GLOBAL",11)StartDialog("DTRANSF","GraceF")~
+    REPLACE_TEXTUALLY ~StartCutScene("1201csG3")~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csg8.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("TRA011")~ ~~
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("TRA010")
+    PlaySequence(ANIM_MISC1)
+    WaitSync(2)
+    PlaySequence(ANIM_TALK2)
+    StartCutScene("1201csG9")~
+   ~SetGlobal("Subtitles","GLOBAL",13)StartDialog("DTRANSF","GraceF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// ============================== TO & DAKKON ================================
+
+COPY_EXISTING ~1201csd1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("DAK089")
+    WaitSync(1)
+    StartCutSceneEx("1201csD2",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",14)StartDialog("DDAKKON","DakkonF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/1201CSD4.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DakkonF")
+    Wait(1)
+    Face(2)
+END
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Trans")
+    MoveToPoint([4350.1211])
+    PlaySequence(ANIM_MISC2)
+    SetGlobal("Subtitles","GLOBAL",15)
+    StartDialog("DTRANS","DakkonF")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CSD4.BAF~
+
+// ================================ TO & ANNAH ================================
+
+COPY_EXISTING ~1201csa1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Ana199D")
+    WaitSync(4)
+    StartCutSceneEx("1201CSA2",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",16)StartDialog("DANNAHF","AnnahF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csa2.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Tra030")
+    PlaySequence(ANIM_MISC2)
+    WaitSync(3)
+    EndCutSceneMode()
+    Dialog(Player1)~
+   ~SetGlobal("Subtitles","GLOBAL",17)StartDialog("DTRANSF","AnnahF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csa4.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("Tra090A")~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// ================================ TO & NORDOM ================================
+
+COPY_EXISTING ~1201csn1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY EXACT_MATCH
+   ~PlaySoundThroughVoice("Nor067")
+    WaitSync(2)
+    Face(NW)
+    PlaySoundThroughVoice("Nor046")
+    WaitSync(4)
+    PlaySong(12)
+    StartCutSceneEx("1201CSN2",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",18)StartDialog("DNORDOM","NordomF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csn2.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY EXACT_MATCH
+   ~PlaySoundThroughVoice("Tra034")
+    WaitSync(3)
+    PlaySong(12)
+    StartCutSceneEx("1201CSN3",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",19)StartDialog("DTRANS","NordomF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~1201csn3.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY EXACT_MATCH
+   ~MoveViewPoint([4300.1000],VERY_FAST)
+    RunToPoint([4223.938])~
+   ~MoveViewPoint([4370.1050],VERY_FAST)
+    RunToPoint([4293.988])~
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("Nor087")
+    StartCutSceneEx("1201CSN4",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",20)StartDialog("DNORDOM","Trans")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/1201CSN4.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("Trans")
+    MoveToPoint([4468.1099])
+    Face(6)
+    PlaySong(12)
+    SetGlobal("Subtitles","GLOBAL",21)
+    StartDialog("DTRANS","NordomF")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CSN4.BAF~
+
+<<<<<<<< .../inlinedfile/1201CSN5.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("NordomF")
+    PlaySong(12)
+    MoveToPoint([4355.1028])
+    Face(14)
+    SetGlobal("Subtitles","GLOBAL",22)
+    StartDialog("DNORDOM","Trans")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1201CSN5.BAF~
+
+COPY_EXISTING ~1201csn6.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY EXACT_MATCH
+   ~CutSceneId("Trans")~
+   ~CutSceneId("Trans")MoveViewPoint([4370.1050],VERY_FAST)~
+    REPLACE_TEXTUALLY EXACT_MATCH
+   ~PlaySoundThroughVoice("Tra066")
+    WaitSync(7)
+    PlaySong(12)
+    StartCutSceneEx("1201CSN7",FALSE)~
+   ~SetGlobal("Subtitles","GLOBAL",23)
+    StartDialog("DTRANS","NordomF")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// ======================== DEIONARRA AFTER CRYSTAL =================================
+
+<<<<<<<< .../inlinedfile/1203CD12.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DeionS")
+    WaitSync(3)
+    FadeFromColor([20.0],0)
+    SetGlobal("Subtitles","GLOBAL",24)
+    StartDialog("DDEIONS","DeionS")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1203CD12.BAF~
+
+<<<<<<<< .../inlinedfile/1203CD22.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DeionS")
+    WaitSync(3)
+    FadeFromColor([20.0],0)
+    SetGlobal("Subtitles","GLOBAL",25)
+    StartDialog("DDEIONS","DeionS")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1203CD22.BAF~
+
+<<<<<<<< .../inlinedfile/1203CD13.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId("DeionS")
+    Wait(2)
+    PlaySequence(ANIM_DIE)
+    EndCutSceneMode()
+    TeleportParty("AR1204",[2373.1417],6)
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1203CD13.BAF~
+
+// ========================= MORTE & ANNAH WHEN GRACE JOINS ========================
+<<<<<<<< .../inlinedfile/0605CUT1.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneID("Annah")
+    Wait(2)
+    SetGlobal("Tattoo_Parlor_Annah","AR0404",0)
+    SetGlobal("Tattoo_Parlor_Grace","AR0404",0)
+    SetGlobal("Subtitles","GLOBAL",26)
+    StartDialog("DANNAH","Annah")
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/0605CUT1.BAF~
+
+//    ActionOverride("Grace",SetDialog(""))
+//    ActionOverride("Grace",Dialogue("Grace"))
+//    ActionOverride("Grace",SetDialog("DGRACE"))
+
+
+// =================== GRACE AND ANNAH'S COMMENTS IN FELL'S STUDIO ==================
+COPY_EXISTING ~0404fell.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~ClearActions(Myself)~ ~~
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("FFG192")~ ~~
+    REPLACE_TEXTUALLY ~StartTimer(1,15)~ ~~
+    REPLACE_TEXTUALLY ~SetGlobal("Tattoo_Parlor_Grace","AR0404",1)~
+   ~SetGlobal("Subtitles","GLOBAL",27)
+    ActionOverride("Grace",StartDialog("DGRACE","Grace")~
+    REPLACE_TEXTUALLY ~!TimerActive(1)~ ~~
+    REPLACE_TEXTUALLY ~PlaySoundThroughVoice("ANA375a")~ ~~
+    REPLACE_TEXTUALLY ~SetGlobal("Tattoo_Parlor_Annah","AR0404",1)~
+   ~SetGlobal("Subtitles","GLOBAL",28)
+    ActionOverride("Annah",StartDialog("DANNAH","Annah")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// ======================== MORTE'S COMMENT IN THE DUSTMAN BAR ======================
+COPY_EXISTING ~ar0205.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+     ~PlaySoundNotRanged("MRT229")~
+     ~SetGlobal("Subtitles","GLOBAL",29)
+      ActionOverride("Morte",StartDialog("DMORTE","Morte"))~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+ // =============================== RAVEL & TNO =====================================
+COPY_EXISTING ~0610cut9.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+    ~PlaySoundThroughVoice("RAV079B")~ ~DisplayString(Myself,51963)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+// ============================== FHJULL FREED ======================================
+
+COPY_EXISTING ~0901cut1.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+    ~StartCutSceneEx("0901ct1b",FALSE)~
+    ~SetGlobal("Subtitles","GLOBAL",30)
+     ActionOverride("Fhjull",StartDialog("DFHJULL","Fhjull"))~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~0901ct1b.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("FFT064")
+    WaitSync(6)~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+
+
+// ============================ LEAVING FHJULL ======================================
+COPY_EXISTING ~1101trg2.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+    ~StartCutSceneEx("1101cut5",FALSE)~ ~StartCutSceneEx("1101CT5A",FALSE)~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlinedfile/1101CT5A.BAF
+IF
+  True()
+THEN
+  RESPONSE #100
+     CutSceneID("Fhjull")
+     SetGlobal("Subtitles","GLOBAL",31)
+     Wait(1)
+     ActionOverride("Fhjull",StartDialog("DFHJULL","Fhjull"))
+END
+>>>>>>>>
+COMPILE ~.../inlinedfile/1101CT5A.BAF~
+
+COPY_EXISTING ~1101cut5.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+   ~PlaySoundThroughVoice("FFT062")
+    WaitSync(4)
+    PlaySoundThroughVoice("FFT063")
+    WaitSync(2)~ ~~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
+
+
+
+/*  BATTLE TAUNTS - NOT WORKING.
+COMPILE ~psteeru/copy/subtitles/1204TRNG.BAF~
+COMPILE ~psteeru/copy/subtitles/1204TRNN.BAF~
+
+<<<<<<<< .../inlinedfile/AR1204taunts.baf
+IF
+  OnCreation()
+THEN
+  RESPONSE #100
+    StartTimer(1,30)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !TimerActive(1)
+THEN
+  RESPONSE #20
+    FloatMessageFixed([1450.930],102033)
+    PlaySoundThroughVoice("Tra001a")
+    StartRandomTimer(1,15,22)
+    Continue()
+END
+>>>>>>>>
+
+EXTEND_TOP ~ar1204.bcs~ ~.../inlinedfile/AR1204taunts.baf~
+*/
+
+/* DEBUG
+<<<<<<<< .../inlinedfile/KillIgnus.BAF
+IF
+  Global("Fortress_Ignus","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Fortress_Ignus","GLOBAL",1)
+END
+>>>>>>>>
+EXTEND_TOP ~ar1201.bcs~ ~.../inlinedfile/KillIgnus.BAF~
+*/
+
+/* DEBUG
+<<<<<<<< .../inlinedfile/KillIgnus.BAF
+IF
+  !Dead("Ignus")
+THEN
+  RESPONSE #100
+    Kill("Ignus")
+END
+>>>>>>>>
+EXTEND_TOP ~ar1201.bcs~ ~.../inlinedfile/KillIgnus.BAF~
+*/

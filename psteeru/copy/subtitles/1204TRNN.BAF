@@ -1,0 +1,79 @@
+IF
+  Die()
+THEN
+  RESPONSE #100
+    SetGlobal("Quit_Game","GLOBAL",1)
+END
+
+IF
+  OnCreation()
+THEN
+  RESPONSE #100
+    StartTimer(1,30)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  !TimerActive(1)
+THEN
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102033)
+    PlaySoundNotRanged("Tra001a")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102034)
+    PlaySoundNotRanged("Tra006")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102035)
+    PlaySoundNotRanged("Tra010")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102036)
+    PlaySoundNotRanged("Tra011")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102037)
+    PlaySoundNotRanged("Tra012")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102038)
+    PlaySoundNotRanged("Tra013")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102039)
+    PlaySoundNotRanged("Tra014")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102040)
+    PlaySoundNotRanged("Tra015")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102041)
+    PlaySoundNotRanged("Tra016")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102042)
+    PlaySoundNotRanged("Tra023")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102043)
+    PlaySoundNotRanged("Tra024")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102044)
+    PlaySoundNotRanged("Tra044")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102045)
+    PlaySoundNotRanged("Tra057a")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102032)
+    PlaySoundNotRanged("Tra068")
+    StartRandomTimer(1,15,22)
+  RESPONSE #20
+    FloatMessageFixed([1450.930],#102046)
+    PlaySoundNotRanged("Tra073a")
+    StartRandomTimer(1,15,22)
+END

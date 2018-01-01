@@ -1,6 +1,6 @@
 BACKUP ~psteeru/backup~
 AUTHOR ~Si1ver~
-VERSION ~V0.3~
+VERSION ~V0.4~
 
 BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.1~
 STRING_SET_RANGE #0 #106833 USING ~psteeru/tra/ru.tra~
@@ -256,3 +256,8 @@ COPY_EXISTING ~kossah.cre~ ~lang/ru_RU/override~
   BUT_ONLY_IF_IT_CHANGES
 
 STRING_SET_RANGE #101014 #101014 USING ~psteeru/tra/fm-hvmrc.tra~
+
+BEGIN ~Subtitled Cutscenes (Russian only)~
+STRING_SET_RANGE #102001 #102097 USING ~psteeru/tra/subtitles.tra~
+COMPILE ~psteeru/dlg/subtitles.d~
+INCLUDE ~psteeru/tph/subtitles.tph~
