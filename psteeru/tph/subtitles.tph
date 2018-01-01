@@ -49,7 +49,7 @@ COPY_EXISTING ~0610ct3c.bcs~ ~lang/ru_RU/override~
   DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY
    ~PlaySoundThroughVoice("RAV090A")~
-   ~PlaySoundThroughVoice("RAV090A")DisplayString(Myself,102050)~
+   ~PlaySoundThroughVoice("RAV090A")FloatMessage(Myself,102050)~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
@@ -57,7 +57,7 @@ COPY_EXISTING ~0610ct3d.bcs~ ~lang/ru_RU/override~
   DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY
    ~PlaySoundThroughVoice("TRA075A")~
-   ~PlaySoundThroughVoice("TRA075A")DisplayString(Myself,102055)~
+   ~PlaySoundThroughVoice("TRA075A")FloatMessage(Myself,102055)~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
@@ -65,7 +65,7 @@ COPY_EXISTING ~0610ct3e.bcs~ ~lang/ru_RU/override~
   DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY
    ~PlaySoundThroughVoice("RAV090B")~
-   ~PlaySoundThroughVoice("RAV090B")DisplayString(Myself,102051)~
+   ~PlaySoundThroughVoice("RAV090B")FloatMessage(Myself,102051)~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
@@ -73,7 +73,7 @@ COPY_EXISTING ~0610ct3f.bcs~ ~lang/ru_RU/override~
   DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY
    ~PlaySoundThroughVoice("TRA075B")~
-   ~PlaySoundThroughVoice("TRA075B")DisplayString(Myself,102056)SetGlobal("Ravel_Cut_Scene","AR0610",12)~
+   ~PlaySoundThroughVoice("TRA075B")FloatMessage(Myself,102056)SetGlobal("Ravel_Cut_Scene","AR0610",12)~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
@@ -655,7 +655,7 @@ COPY_EXISTING ~ar0205.bcs~ ~lang/ru_RU/override~
 COPY_EXISTING ~0610cut9.bcs~ ~lang/ru_RU/override~
   DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY
-    ~PlaySoundThroughVoice("RAV079B")~ ~DisplayString(Myself,51963)~
+    ~PlaySoundThroughVoice("RAV079B")~ ~FloatMessage(Myself,51963)~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
