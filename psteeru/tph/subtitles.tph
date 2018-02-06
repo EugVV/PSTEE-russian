@@ -659,6 +659,14 @@ COPY_EXISTING ~0610cut9.bcs~ ~lang/ru_RU/override~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
+COPY_EXISTING ~0610cutc.bcs~ ~lang/ru_RU/override~
+  DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY
+    ~PlaySoundThroughVoice("RAV079B")~ ~FloatMessage(Myself,51963)
+PlaySoundThroughVoice("RAV079B")~
+  COMPILE_BAF_TO_BCS
+ BUT_ONLY_IF_IT_CHANGES
+
 // ============================== FHJULL FREED ======================================
 
 COPY_EXISTING ~0901cut1.bcs~ ~lang/ru_RU/override~
