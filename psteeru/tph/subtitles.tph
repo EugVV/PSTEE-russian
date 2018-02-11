@@ -595,8 +595,11 @@ IF
 THEN
   RESPONSE #100
     CutSceneId("DeionS")
-    Wait(2)
+    WaitSync(4)
     PlaySequence(ANIM_DIE)
+    FadeToColor([20.0],0)
+    WaitSync(1)
+    SetRenderable(Player1,TRUE)
     EndCutSceneMode()
     TeleportParty("AR1204",[2373.1417],6)
 END
