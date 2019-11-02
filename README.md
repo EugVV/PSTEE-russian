@@ -27,6 +27,8 @@ PSTEE-russian
 
 Перевод новых строк, адаптация к EE, исправления и доработка: Si1ver.
 
+Вычитка текста: wooder.
+
 Шрифты в сборке: DZH.
 
 [Тема для обсуждения перевода](http://www.arcanecoast.ru/forum/viewtopic.php?f=8&t=1045).
