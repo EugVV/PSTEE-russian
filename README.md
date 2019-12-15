@@ -23,12 +23,12 @@ PSTEE-russian
 
 Над переводом работали
 ----------------------
-Авторы Arcane Pack: Macbeth, Refiler, wooder, Aldark.
-
 Перевод новых строк, адаптация к EE, исправления и доработка: Si1ver.
 
 Вычитка текста: wooder.
 
 Шрифты в сборке: DragonZH.
+
+Авторы Arcane Pack: Macbeth, Refiler, wooder, Aldark.
 
 [Тема для обсуждения перевода](http://www.arcanecoast.ru/forum/viewtopic.php?f=8&t=1045).
