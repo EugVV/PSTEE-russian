@@ -1,6 +1,6 @@
 BACKUP ~psteeru/backup~
 AUTHOR ~Si1ver~
-VERSION ~V1.1~
+VERSION ~V2.0~
 
 BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.1~
 STRING_SET_RANGE #0 #106833 USING ~psteeru/tra/ru.tra~
@@ -268,3 +268,16 @@ COPY ~psteeru/fonts/EXOCET.ttf~   ~lang/ru_RU/fonts/EXOCET.ttf~
 
 BEGIN ~Adjusting font scaling for Russian fonts~
 COPY ~psteeru/M_STYLES.lua~   ~override/M_STYLES.lua~
+
+BEGIN ~Russian translation of menu buttons~
+COPY ~psteeru/copy/bam/CGATTR.BAM~   ~lang/ru_RU/override/CGATTR.BAM~
+COPY ~psteeru/copy/bam/STARTBUT.BAM~   ~lang/ru_RU/override/STARTBUT.BAM~
+COPY ~psteeru/copy/pvrz/MOS2000.PVRZ~   ~lang/ru_RU/override/MOS2000.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2001.PVRZ~   ~lang/ru_RU/override/MOS2001.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2002.PVRZ~   ~lang/ru_RU/override/MOS2002.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2003.PVRZ~   ~lang/ru_RU/override/MOS2003.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2004.PVRZ~   ~lang/ru_RU/override/MOS2004.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2005.PVRZ~   ~lang/ru_RU/override/MOS2005.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2006.PVRZ~   ~lang/ru_RU/override/MOS2006.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2007.PVRZ~   ~lang/ru_RU/override/MOS2007.PVRZ~
+COPY ~psteeru/copy/pvrz/MOS2011.PVRZ~   ~lang/ru_RU/override/MOS2011.PVRZ~
