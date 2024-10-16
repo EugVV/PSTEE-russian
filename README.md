@@ -33,6 +33,8 @@ PSTEE-russian
 
 Шрифты в сборке: DragonZH.
 
+Перевод кнопок меню и иконок характеристик: Apxu.
+
 Авторы Arcane Pack: Macbeth, Refiler, wooder, Aldark.
 
 [Тема для обсуждения перевода](http://www.arcanecoast.ru/forum/viewtopic.php?f=8&t=1045).
