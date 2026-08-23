@@ -1,9 +1,9 @@
 BACKUP ~psteeru/backup~
 AUTHOR ~Si1ver~
-VERSION ~V2.0~
+VERSION ~V2.1~
 
-BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.1~
-STRING_SET_RANGE #0 #106833 USING ~psteeru/tra/ru.tra~
+BEGIN ~Russian text for Planescape: Torment Enhanced Edition v3.2~
+STRING_SET_RANGE #0 #106853 USING ~psteeru/tra/ru.tra~
 
 COPY ~psteeru/includes.lua~   ~override/includes.lua~
 
