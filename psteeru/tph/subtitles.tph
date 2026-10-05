@@ -392,7 +392,7 @@ COPY_EXISTING ~1201csg2.bcs~ ~lang/ru_RU/override~
     REPLACE_TEXTUALLY ~CutSceneId("GraceF")~ ~CutSceneId("GraceF")MoveToPoint([4631.1180])Face(7)~
     REPLACE_TEXTUALLY ~PlaySoundThroughVoice("TRA032")~
                       ~Wait(1)SetGlobal("Subtitles","GLOBAL",11)StartDialog("DTRANSF","GraceF")~
-    REPLACE_TEXTUALLY ~StartCutScene("1201csG3")~ ~~
+    REPLACE_TEXTUALLY ~StartCutSceneEx("1201csG3",FALSE)~ ~~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
 
@@ -404,7 +404,7 @@ COPY_EXISTING ~1201csg8.bcs~ ~lang/ru_RU/override~
     PlaySequence(ANIM_MISC1)
     WaitSync(2)
     PlaySequence(ANIM_TALK2)
-    StartCutScene("1201csG9")~
+    StartCutSceneEx("1201csG9",FALSE)~
    ~SetGlobal("Subtitles","GLOBAL",13)StartDialog("DTRANSF","GraceF")~
   COMPILE_BAF_TO_BCS
  BUT_ONLY_IF_IT_CHANGES
