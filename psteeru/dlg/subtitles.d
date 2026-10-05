@@ -36,13 +36,13 @@ APPEND DTRANS
 END
 
 REPLACE_TRANS_ACTION DTRANS BEGIN 142 END BEGIN 0 END
-   ~StartCutScene("1204trb1")~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",3)StartCutScene("1204trb")~
+   ~StartCutSceneEx("1204trb1",FALSE)~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",3)StartCutSceneEx("1204trb",FALSE)~
 REPLACE_TRANS_ACTION DTRANS BEGIN 142 END BEGIN 1 END
-   ~StartCutScene("1204trb2")~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",4)StartCutScene("1204trb")~
+   ~StartCutSceneEx("1204trb2",FALSE)~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",4)StartCutSceneEx("1204trb",FALSE)~
 REPLACE_TRANS_ACTION DTRANS BEGIN 142 END BEGIN 2 END
-   ~StartCutScene("1204trb3")~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",5)StartCutScene("1204trb")~
+   ~StartCutSceneEx("1204trb3",FALSE)~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",5)StartCutSceneEx("1204trb",FALSE)~
 REPLACE_TRANS_ACTION DTRANS BEGIN 142 END BEGIN 3 END
-   ~StartCutScene("1204trb2")~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",4)StartCutScene("1204trb")~
+   ~StartCutSceneEx("1204trb2",FALSE)~ ~SetGlobal("Transcendent_Final_Speech","GLOBAL",4)StartCutSceneEx("1204trb",FALSE)~
 
 
 
