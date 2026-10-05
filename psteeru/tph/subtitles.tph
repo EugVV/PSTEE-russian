@@ -427,7 +427,7 @@ IF
 THEN
   RESPONSE #100
     CutSceneId("DakkonF")
-    Wait(1)
+    WaitSync(1)
     Face(2)
 END
 
